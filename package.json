@@ -1,11 +1,13 @@
 {
-  "name": "embed-viewer",
+  "name": "embed-video-parser",
   "version": "1.0.0",
   "description": "Embed Viewer for Youtube, Odysee, Aparat and Vimeo",
-  "main": "src/app.ts",
+  "files": [
+    "./src/**",
+    "./bin/**"
+  ],
   "author": "Soroosh Tanzadeh <soroosh081@gmail.com>",
   "license": "MIT",
-  "private": true,
   "scripts": {
     "test": "jest"
   },
