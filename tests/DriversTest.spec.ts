@@ -1,4 +1,5 @@
 import AparatDriver from "../src/Drivers/AparatDriver";
+import VimeoDriver from "../src/Drivers/VimeoDriver";
 import YoutubeDriver from "../src/Drivers/YoutubeDriver";
 
 // Check Youtube Driver
@@ -15,4 +16,12 @@ test("Aparat Driver Check", () => {
 	expect(driver.validate("https://www.aparat.com/v/uJ1dh?playlist=248969")).toBe(true);
 	expect(driver.getId("https://www.aparat.com/v/uJ1dh?playlist=248969")).toBe("uJ1dh");
 	expect(driver.getEmbedURL("https://www.aparat.com/v/uJ1dh?playlist=248969")).toBe("https://www.aparat.com/video/video/embed/videohash/uJ1dh/vt/frame");
+});
+
+// Check Aparat Driver
+test("Vimeo Driver Check", () => {
+	const driver = new VimeoDriver();
+	expect(driver.validate("https://vimeo.com/673993283")).toBe(true);
+	expect(driver.getId("https://vimeo.com/673993283")).toBe("673993283");
+	expect(driver.getEmbedURL("https://vimeo.com/673993283")).toBe("https://player.vimeo.com/video/673993283");
 });
