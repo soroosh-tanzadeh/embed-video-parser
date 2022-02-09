@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Embed Viewer for Youtube, Odysee, Aparat and Vimeo",
   "main": "bin/src/index.js",
+  "private": false,
   "files": [
     "src/**",
     "bin/**"
@@ -23,5 +24,9 @@
     "jest": "^27.5.1",
     "ts-jest": "^27.1.3",
     "ts-node": "^10.5.0"
+  },
+  "repository": "https://github.com/soroosh-tanzadeh/embed-video-parser.git",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }
