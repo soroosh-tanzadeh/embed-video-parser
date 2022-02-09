@@ -1,4 +1,11 @@
 import DriverObject from "./Drivers/DriverObject";
+import config from "./ParserConfig";
+
+interface Embed {
+	name: string;
+	embed: string;
+	id: string;
+}
 
 class EmbedParser {
 	private drivers: Array<DriverObject>;
@@ -11,7 +18,7 @@ class EmbedParser {
 		this.drivers.push(driver);
 	}
 
-	public parse(url: string) {
+	public parse(url: string): Embed | null {
 		for (let i = 0; i < this.drivers.length; i++) {
 			const driverObject = this.drivers[i];
 			if (driverObject.driver.validate(url)) {
@@ -22,7 +29,9 @@ class EmbedParser {
 				};
 			}
 		}
+		return null;
 	}
 }
 
 export default EmbedParser;
+export { config };
